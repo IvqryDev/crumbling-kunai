@@ -8,13 +8,10 @@ import net.neoforged.fml.common.Mod;
 
 @Mod(CrumblingKunai.MOD_ID)
 public class CrumblingKunai {
-    public static final String MOD_ID = "valcon";
+    public static final String MOD_ID = "crumbling_kunai";
 
-    public CrumblingKunai(ModContainer container) {
-        container.registerConfig(net.neoforged.fml.config.ModConfig.Type.COMMON, ModConfig.SPEC);
-    }
-    public CrumblingKunai(IEventBus modEventBus) {
-
+    public CrumblingKunai(IEventBus modEventBus, ModContainer container) {
         ModSounds.register(modEventBus);
+        container.registerConfig(net.neoforged.fml.config.ModConfig.Type.COMMON, ModConfig.SPEC);
     }
 }
